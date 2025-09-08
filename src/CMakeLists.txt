@@ -9,5 +9,7 @@ add_executable(main main.cpp)
 target_link_libraries(main sealpir)
 
 add_library(pysealpir MODULE ../python/bindings.cpp)
-target_link_libraries(pysealpir PRIVATE sealpir pybind11::module)
+target_include_directories(pysealpir PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(pysealpir PRIVATE sealpir)
+target_link_libraries(pysealpir PRIVATE pybind11::module)
 set_target_properties(pysealpir PROPERTIES OUTPUT_NAME "sealpir" PREFIX "" SUFFIX ".so")
