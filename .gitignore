@@ -343,3 +343,6 @@ ASALocalRun/
 # Built targets.
 libsealpir.a
 
+*.so
+
+Testing
