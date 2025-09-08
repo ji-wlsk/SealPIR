@@ -68,7 +68,7 @@ static py::bytes decode_reply_serialized(PIRClient &client,
     PirReply r;
     while (rs.rdbuf()->in_avail() > 0) {
         seal::Ciphertext ct;
-        ct.load(*client.context_, rs);
+        ct.load(*client.get_context(), rs);
         r.push_back(ct);
     }
     std::vector<uint8_t> result = client.decode_reply(r, offset);

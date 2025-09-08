@@ -40,6 +40,8 @@ public:
                                   std::vector<std::uint64_t> new_element,
                                   std::uint64_t offset);
 
+  std::shared_ptr<seal::SEALContext> get_context() const;
+
 private:
   seal::EncryptionParameters enc_params_;
   PirParams pir_params_;
