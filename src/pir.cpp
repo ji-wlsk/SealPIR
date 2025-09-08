@@ -372,7 +372,7 @@ PirQuery deserialize_query(uint32_t d, uint32_t count, string s,
   return q;
 }
 
-string serialize_galoiskeys(Serializable<GaloisKeys> g) {
+string serialize_galoiskeys(const GaloisKeys &g) {
   std::ostringstream output;
   g.save(output);
   return output.str();
