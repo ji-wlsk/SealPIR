@@ -1,6 +1,6 @@
 """Minimal round-trip example using SealPIR bindings."""
 
-from sealpir import (
+from pysealpir import (
     PIRClient,
     PIRServer,
     gen_encryption_params,

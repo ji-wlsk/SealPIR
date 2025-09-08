@@ -95,7 +95,7 @@ static void set_galois_key_serialized(PIRServer &server, std::uint32_t client_id
     delete g;
 }
 
-PYBIND11_MODULE(sealpir, m) {
+PYBIND11_MODULE(_pysealpir, m) {
     m.doc() = "Python bindings for SealPIR";
 
     py::class_<seal::EncryptionParameters>(m, "EncryptionParameters")

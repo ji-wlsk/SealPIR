@@ -1,6 +1,6 @@
 """Verify basic SealPIR round-trip."""
 
-from sealpir import (
+from pysealpir import (
     PIRClient,
     PIRServer,
     gen_encryption_params,
