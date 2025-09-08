@@ -287,3 +287,7 @@ Ciphertext PIRClient::get_one() {
   }
   return ct;
 }
+
+std::shared_ptr<seal::SEALContext> PIRClient::get_context() const {
+  return context_;
+}
