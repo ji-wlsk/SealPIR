@@ -33,8 +33,20 @@ ctest .
 
 # Using SealPIR
 
-Take a look at the example in `src/main.cpp` for how to use SealPIR. 
+Take a look at the example in `src/main.cpp` for how to use SealPIR.
 You can also look at the tests in the `test` folder.
+
+## Python bindings
+
+Experimental Python bindings are provided via [pybind11](https://pybind11.readthedocs.io/).
+Build and install the module locally with:
+
+```
+pip install -e python
+```
+
+An example script is available at `examples/basic_pir.py` and a pytest-based
+smoke test lives in `tests/test_pir.py`.
 
 
 ## Default parameters

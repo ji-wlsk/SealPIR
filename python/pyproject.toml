@@ -1,0 +1,14 @@
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "sealpir"
+version = "0.0.1"
+description = "Python bindings for SealPIR"
+authors = [{name = "SealPIR contributors"}]
+requires-python = ">=3.8"
+
+[tool.scikit-build]
+cmake.source-dir = ".."
+wheel.packages = ["sealpir"]
