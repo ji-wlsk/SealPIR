@@ -39,6 +39,8 @@ You can also look at the tests in the `test` folder.
 ## Python bindings
 
 Experimental Python bindings are provided via [pybind11](https://pybind11.readthedocs.io/).
+Python 3.11 requires pybind11 version 2.10 or newer.
+
 Build and install the module locally with:
 
 ```

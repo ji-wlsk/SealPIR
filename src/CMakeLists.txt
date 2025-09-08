@@ -1,5 +1,5 @@
 find_package(SEAL 4.0 REQUIRED)
-find_package(pybind11 CONFIG REQUIRED)
+find_package(pybind11 2.10 CONFIG REQUIRED)
 
 add_library(sealpir pir.hpp pir.cpp pir_client.hpp pir_client.cpp pir_server.hpp
   pir_server.cpp)
