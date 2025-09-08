@@ -28,6 +28,8 @@ public:
   // bytes written
   int serialize_reply(PirReply &reply, std::stringstream &stream);
 
+  void set_galois_key(std::uint32_t client_id,
+                      seal::Serializable<seal::GaloisKeys> &galkey);
   void set_galois_key(std::uint32_t client_id, seal::GaloisKeys galkey);
 
   // Below simple operations are for interacting with the database WITHOUT PIR.

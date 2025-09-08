@@ -91,7 +91,7 @@ int query_test(uint64_t num_items, uint64_t item_size, uint32_t degree,
 
   // Set galois key for client with id 0
   cout << "Main: Setting Galois keys...";
-  server.set_galois_key(0, galois_keys.release());
+  server.set_galois_key(0, galois_keys);
 
   // Measure database setup
   auto time_pre_s = high_resolution_clock::now();

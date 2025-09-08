@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 
   // Set galois key for client with id 0
   cout << "Main: Setting Galois keys...";
-  server.set_galois_key(0, galois_keys.release());
+  server.set_galois_key(0, galois_keys);
 
   random_device rd;
   // Choose an index of an element in the DB
