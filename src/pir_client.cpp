@@ -238,7 +238,7 @@ Plaintext PIRClient::decode_reply(PirReply &reply) {
   return fail;
 }
 
-GaloisKeys PIRClient::generate_galois_keys() {
+Serializable<GaloisKeys> PIRClient::generate_galois_keys() {
   // Generate the Galois keys needed for coeff_select.
   vector<uint32_t> galois_elts;
   int N = enc_params_.poly_modulus_degree();
@@ -252,9 +252,7 @@ GaloisKeys PIRClient::generate_galois_keys() {
     // cout << galois_elts.back() << ", ";
     //#endif
   }
-  GaloisKeys gal_keys;
-  keygen_->create_galois_keys(galois_elts, gal_keys);
-  return gal_keys;
+  return keygen_->create_galois_keys(galois_elts);
 }
 
 Plaintext PIRClient::replace_element(Plaintext pt, vector<uint64_t> new_element,

@@ -79,7 +79,7 @@ static py::bytes decode_reply_serialized(PIRClient &client,
 // Wrap generation of galois keys
 static py::bytes generate_galois_keys_serialized(PIRClient &client) {
     auto g = client.generate_galois_keys();
-    std::string s = serialize_galoiskeys(g);
+    std::string s = serialize_galoiskeys(std::move(g));
     return py::bytes(s);
 }
 
