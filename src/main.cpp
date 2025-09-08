@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
   PIRClient client(enc_params, pir_params);
   cout << "Main: Generating galois keys for client" << endl;
 
-  GaloisKeys galois_keys = client.generate_galois_keys();
+  auto galois_keys = client.generate_galois_keys();
 
   // Initialize PIR Server
   cout << "Main: Initializing server" << endl;

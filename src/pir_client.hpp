@@ -27,7 +27,7 @@ public:
 
   seal::Plaintext decrypt(seal::Ciphertext ct);
 
-  seal::GaloisKeys generate_galois_keys();
+  seal::Serializable<seal::GaloisKeys> generate_galois_keys();
 
   // Index and offset of an element in an FV plaintext
   uint64_t get_fv_index(uint64_t element_index);
@@ -40,7 +40,6 @@ public:
                                   std::vector<std::uint64_t> new_element,
                                   std::uint64_t offset);
 
-  // Accessor for the underlying SEALContext
   std::shared_ptr<seal::SEALContext> get_context() const;
 
 private:
