@@ -17,4 +17,4 @@ target_include_directories(pysealpir PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(pysealpir PRIVATE sealpir)
 target_link_libraries(pysealpir PRIVATE pybind11::module)
 
-set_target_properties(pysealpir PROPERTIES OUTPUT_NAME "sealpir" PREFIX "" SUFFIX ".so")
+set_target_properties(pysealpir PROPERTIES OUTPUT_NAME "_pysealpir" PREFIX "" SUFFIX ".so")

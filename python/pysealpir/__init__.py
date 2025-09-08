@@ -1,6 +1,6 @@
 """High level helpers for SealPIR."""
 
-from .sealpir import (
+from ._pysealpir import (
     PirParams,
     PIRClient,
     PIRServer,
