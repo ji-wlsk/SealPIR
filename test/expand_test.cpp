@@ -49,11 +49,11 @@ int main(int argc, char *argv[]) {
 
   // Initialize PIR client....
   PIRClient client(enc_params, pir_params);
-  GaloisKeys galois_keys = client.generate_galois_keys();
+  auto galois_keys = client.generate_galois_keys();
 
   // Set galois key for client with id 0
   cout << "Main: Setting Galois keys...";
-  server.set_galois_key(0, galois_keys);
+  server.set_galois_key(0, galois_keys.release());
 
   random_device rd;
   // Choose an index of an element in the DB

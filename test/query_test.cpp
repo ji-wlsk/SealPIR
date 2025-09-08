@@ -87,11 +87,11 @@ int query_test(uint64_t num_items, uint64_t item_size, uint32_t degree,
 
   // Initialize PIR client....
   PIRClient client(enc_params, pir_params);
-  GaloisKeys galois_keys = client.generate_galois_keys();
+  auto galois_keys = client.generate_galois_keys();
 
   // Set galois key for client with id 0
   cout << "Main: Setting Galois keys...";
-  server.set_galois_key(0, galois_keys);
+  server.set_galois_key(0, galois_keys.release());
 
   // Measure database setup
   auto time_pre_s = high_resolution_clock::now();
