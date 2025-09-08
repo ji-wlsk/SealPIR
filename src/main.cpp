@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
   // which is why we associate it with 0. If there are multiple PIR
   // clients, you should have each client generate a galois key,
   // and assign each client an index or id, then call the procedure below.
-  server.set_galois_key(0, galois_keys.release());
+  server.set_galois_key(0, galois_keys);
 
   cout << "Main: Creating the database with random data (this may take some "
           "time) ..."
