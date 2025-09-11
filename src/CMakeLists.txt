@@ -18,3 +18,4 @@ target_link_libraries(pysealpir PRIVATE sealpir)
 target_link_libraries(pysealpir PRIVATE pybind11::module)
 
 set_target_properties(pysealpir PROPERTIES OUTPUT_NAME "_pysealpir" PREFIX "" SUFFIX ".so")
+install(TARGETS pysealpir LIBRARY DESTINATION pysealpir)

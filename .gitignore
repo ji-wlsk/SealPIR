@@ -346,3 +346,4 @@ libsealpir.a
 *.so
 
 Testing
+*.cmake
